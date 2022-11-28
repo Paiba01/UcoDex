@@ -19,7 +19,7 @@
         app:srcCompat="@mipmap/fondo_background" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/button_inicio"
         android:layout_width="77dp"
         android:layout_height="90dp"
         android:backgroundTint="#C8C1C1"
