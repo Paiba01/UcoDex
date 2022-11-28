@@ -23,11 +23,13 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="209dp"
-        android:layout_height="179dp"
+        android:layout_width="188dp"
+        android:layout_height="131dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/tabLayout2"
-        app:srcCompat="@mipmap/letras_background"
-        tools:layout_editor_absoluteY="-30dp" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@mipmap/letras_background" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
