@@ -15,10 +15,6 @@ import java.util.ArrayList;
 
 import com.example.ucodex.models.Pokemon;
 
-/**
- * Created by Daniel Alvarez on 28/7/16.
- * Copyright Â© 2016 Alvarez.tech. All rights reserved.
- */
 public class ListaPokemonAdapter extends RecyclerView.Adapter<ListaPokemonAdapter.ViewHolder> {
 
     private ArrayList<Pokemon> dataset;
