@@ -8,6 +8,7 @@ import android.widget.ImageButton;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class item_pokemon extends AppCompatActivity {
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
