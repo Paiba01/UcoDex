@@ -39,13 +39,12 @@ public class ListaPokemonAdapter extends RecyclerView.Adapter<ListaPokemonAdapte
     public void onBindViewHolder(ViewHolder holder, int position) {
         Pokemon p = dataset.get(position);
         holder.nombreTextView.setText(p.getName());
-    /*
+
         Glide.with(context)
                 .load("https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/" + p.getNumber() + ".png")
                 .centerCrop()
                 .diskCacheStrategy(DiskCacheStrategy.ALL)
                 .into(holder.fotoImageView);
-    */
     }
 
 

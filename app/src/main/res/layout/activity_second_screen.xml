@@ -33,11 +33,13 @@
         app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@mipmap/letras_background" />
 
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
         android:layout_width="411dp"
-        android:layout_height="616dp"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="117dp" />
+        android:layout_height="466dp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="dp"
+        tools:layout_editor_absoluteY="265dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
