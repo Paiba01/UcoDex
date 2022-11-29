@@ -7,6 +7,7 @@
     tools:context=".SecondScreen">
 
     <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="413dp"
         android:layout_height="119dp"
         android:orientation="vertical"
@@ -49,8 +50,8 @@
         android:id="@+id/recyclerView"
         android:layout_width="407dp"
         android:layout_height="731dp"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
         tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="0dp" />
+        tools:layout_editor_absoluteX="0dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
