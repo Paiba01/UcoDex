@@ -1,9 +1,11 @@
 package com.example.ucodex;
 
-import android.telecom.Call;
+import retrofit2.Call;
+import com.example.ucodex.models.PokemonAnswer;
+
 import retrofit2.http.GET;
 
 public interface PokemonAPIService {
     @GET("pokemon/?limit=50")
-    Call getPokemon();
+    Call<PokemonAnswer> obtenerListaPokemon();
 }

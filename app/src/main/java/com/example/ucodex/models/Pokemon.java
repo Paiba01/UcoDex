@@ -1,15 +1,11 @@
-package com.example.ucodex;
+package com.example.ucodex.models;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
 public class Pokemon {
-    @SerializedName("name")
-    @Expose
-    private String name;
 
-    @SerializedName("url")
-    @Expose
+    private String name;
     private String url;
 
     public String getName() {
@@ -20,7 +16,11 @@ public class Pokemon {
         this.name = name;
     }
 
-    public String getDescription() {
-        return "It's " + getName() + "!";
+    public String getUrl() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
     }
 }
