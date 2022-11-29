@@ -62,7 +62,7 @@ public class ListaPokemonAdapter extends RecyclerView.Adapter<ListaPokemonAdapte
         public ViewHolder(View itemView) {
             super(itemView);
 
-            fotoImageView = itemView.findViewById(R.id.fotoImageView);
+            fotoImageView = itemView.findViewById(R.id.pokemon_button);
             nombreTextView = itemView.findViewById(R.id.nombreTextView);
         }
     }

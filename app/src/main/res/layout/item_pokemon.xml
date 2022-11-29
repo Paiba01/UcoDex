@@ -9,11 +9,11 @@
     android:orientation="vertical">
 
     <ImageButton
-        android:id="@+id/fotoImageView"
+        android:id="@+id/pokemon_button"
         android:layout_width="96dp"
         android:layout_height="96dp"
         android:layout_gravity="center_horizontal"
-        android:background="#FFFFFF" />
+        android:background="#CBFFFFFF" />
 
     <TextView
         android:id="@+id/nombreTextView"
