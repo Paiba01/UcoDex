@@ -1,16 +1,13 @@
 package com.example.ucodex;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.View;
-import android.widget.Button;
-import android.widget.ImageButton;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.ucodex.interfaces.PokemonAPIService;
 import com.example.ucodex.models.Pokemon;
 import com.example.ucodex.models.PokemonAnswer;
 

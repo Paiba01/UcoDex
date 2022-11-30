@@ -1,4 +1,4 @@
-package com.example.ucodex;
+package com.example.ucodex.interfaces;
 
 import retrofit2.Call;
 import com.example.ucodex.models.PokemonAnswer;

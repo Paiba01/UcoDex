@@ -8,12 +8,18 @@ import android.view.View;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
+
 public class Description_screen extends AppCompatActivity {
+
+    private Retrofit retrofit;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_description_screen);
+
         //Boton de atras
         ImageButton buttonClick = (ImageButton) findViewById(R.id.backButton);
         buttonClick.setOnClickListener(new View.OnClickListener() {
@@ -29,6 +35,12 @@ public class Description_screen extends AppCompatActivity {
         if(extras != null){
             pokemonName = extras.getString("name");
         }
+
+        retrofit = new Retrofit.Builder()
+                .baseUrl("https://pokeapi.co/api/v2/pokemon/" + pokemonName + "/")
+                .addConverterFactory(GsonConverterFactory.create())
+                .build();
+
 
 
     }
