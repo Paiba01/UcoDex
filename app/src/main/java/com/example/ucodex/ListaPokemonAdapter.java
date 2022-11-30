@@ -46,7 +46,9 @@ public class ListaPokemonAdapter extends RecyclerView.Adapter<ListaPokemonAdapte
         holder.fotoImageButton.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View v) {
-                context.startActivity(new Intent(context, Description_screen.class));
+                Intent intent = new Intent(context, Description_screen.class);
+                intent.putExtra("name",p.getName());
+                context.startActivity(intent);
             }
         });;
     }
