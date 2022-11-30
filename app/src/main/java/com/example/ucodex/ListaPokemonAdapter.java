@@ -1,9 +1,10 @@
 package com.example.ucodex;
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
@@ -40,9 +41,15 @@ public class ListaPokemonAdapter extends RecyclerView.Adapter<ListaPokemonAdapte
                 .load("https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/" + p.getNumber() + ".png")
                 .centerCrop()
                 .diskCacheStrategy(DiskCacheStrategy.ALL)
-                .into(holder.fotoImageView);
-    }
+                .into(holder.fotoImageButton);
 
+        holder.fotoImageButton.setOnClickListener(new View.OnClickListener() {
+
+            public void onClick(View v) {
+                context.startActivity(new Intent(context, Description_screen.class));
+            }
+        });;
+    }
 
     @Override
     public int getItemCount() {
@@ -56,14 +63,18 @@ public class ListaPokemonAdapter extends RecyclerView.Adapter<ListaPokemonAdapte
 
     public class ViewHolder extends RecyclerView.ViewHolder {
 
-        private ImageView fotoImageView;
+        ImageButton fotoImageButton;
         private TextView nombreTextView;
+
+        Context context;
 
         public ViewHolder(View itemView) {
             super(itemView);
+            context = itemView.getContext();
 
-            fotoImageView = itemView.findViewById(R.id.pokemon_button);
+            fotoImageButton = (ImageButton) itemView.findViewById(R.id.pokemon_button);
             nombreTextView = itemView.findViewById(R.id.nombreTextView);
         }
     }
+
 }
