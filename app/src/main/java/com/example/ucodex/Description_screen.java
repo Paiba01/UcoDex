@@ -5,11 +5,15 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.ucodex.interfaces.PokeDataService;
 import com.example.ucodex.models.Pokemon;
+import com.example.ucodex.models.types;
+
+import java.util.ArrayList;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -64,13 +68,37 @@ public class Description_screen extends AppCompatActivity {
                 if(response.isSuccessful()) {
 
                     Pokemon p = response.body();
-                    String pName = p.getName();
-                    int pHeight = p.getHeight();
-                    int pId = p.getId();
 
-                    Log.e(TAG, "Nombre del pokemon: " + pName);
-                    Log.e(TAG, "Altura del pokemon: " + pHeight);
-                    Log.e(TAG, "ID del pokemon: " + pId);
+                    TextView nameTextView;
+                    nameTextView = (TextView) findViewById(R.id.pName);
+                    nameTextView.setText(p.getName());
+
+                    TextView PesoTextView;
+                    PesoTextView = (TextView) findViewById(R.id.pWeight);
+                    PesoTextView.setText(String.valueOf(p.getWeight()));
+
+                    TextView AlturaTextView;
+                    AlturaTextView = (TextView) findViewById(R.id.pHeight);
+                    AlturaTextView.setText(String.valueOf(p.getHeight()));
+
+                    TextView IDTextView;
+                    IDTextView = (TextView) findViewById(R.id.pId);
+                    IDTextView.setText(String.valueOf(p.getId()));
+
+                    ArrayList<types> typeList = p.getTypes();
+                    for(int i=0;i< typeList.size();i++){
+                        types t = typeList.get(i);
+                        TextView typeTextView;
+                        if(i==0){
+                            typeTextView = (TextView) findViewById(R.id.pType1);
+                            typeTextView.setText(t.getName());
+                        }
+                        if(i==1){
+                                typeTextView = (TextView) findViewById(R.id.pType2);
+                                typeTextView.setText(t.getName());
+                        }
+                    }
+
 
                 } else{
                     Log.e(TAG," onResponse: " + response.errorBody());

@@ -8,12 +8,12 @@ public class Pokemon {
     private String name;
     private String url;
 
-    //private ArrayList<String> types;
+    private ArrayList<types> types;
     private int weight;
     private int height;
     private int baseExperience;
     private int id;
- //   private ArrayList<String> abilities;
+    //private ArrayList<String> abilities;
 
 
 
@@ -38,10 +38,10 @@ public class Pokemon {
     public void setNumber(int number) {
         this.number = number;
     }
-/*
-    public ArrayList<String> getTypes() {return types;}
-    public void setTypes(ArrayList<String> types) {this.types = types;}
-*/
+
+    public ArrayList<types> getTypes() {return types;}
+    public void setTypes(ArrayList<types> types) {this.types = types;}
+
     public int getWeight() {return weight;}
     public void setWeight(int weight) {this.weight = weight;}
 
