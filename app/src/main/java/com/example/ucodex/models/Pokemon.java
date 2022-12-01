@@ -1,7 +1,6 @@
 package com.example.ucodex.models;
 
-import com.google.gson.annotations.Expose;
-import com.google.gson.annotations.SerializedName;
+import java.util.ArrayList;
 
 public class Pokemon {
 
@@ -9,12 +8,12 @@ public class Pokemon {
     private String name;
     private String url;
 
-    private String type1;
-    private String type2;
+    //private ArrayList<String> types;
     private int weight;
     private int height;
     private int baseExperience;
     private int id;
+ //   private ArrayList<String> abilities;
 
 
 
@@ -39,13 +38,10 @@ public class Pokemon {
     public void setNumber(int number) {
         this.number = number;
     }
-
-    public String getType1() {return type1;}
-    public void setType1(String type1) {this.type1 = type1;}
-
-    public String getType2() {return type2;}
-    public void setType2(String type2) {this.type2 = type2;}
-
+/*
+    public ArrayList<String> getTypes() {return types;}
+    public void setTypes(ArrayList<String> types) {this.types = types;}
+*/
     public int getWeight() {return weight;}
     public void setWeight(int weight) {this.weight = weight;}
 
@@ -57,4 +53,9 @@ public class Pokemon {
 
     public int getId() {return id;}
     public void setId(int id) {this.id = id;}
+
+    /*
+    public ArrayList<String> getAbilities() {return abilities;}
+    public void setAbilities(ArrayList<String> abilities) {this.abilities = abilities;}
+    */
 }
