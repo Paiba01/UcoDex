@@ -88,7 +88,7 @@ public class Description_screen extends AppCompatActivity {
 
 
                     ArrayList<types> typeList = p.getTypes();
-
+/*
                     TextView type1TextView;
                     type1TextView = (TextView) findViewById(R.id.pType1);
                     type1TextView.setText(typeList.get(0).getPokemonType().getName());
@@ -105,25 +105,25 @@ public class Description_screen extends AppCompatActivity {
                     type2TextView = (TextView) findViewById(R.id.pType2);
                     type2TextView.setText(typeList.get(1).getPokemonType().getName());
 
+*/
 
-/*
                     for(int i=0;i< typeList.size();i++){
                         types t = typeList.get(i);
 
                         if(i==0){
                             TextView typeTextView;
                             typeTextView = (TextView) findViewById(R.id.pType1);
-                            typeTextView.setText(pt.getName());
-                            Log.e(TAG,"tipo1: "+ pt.getName());
+                            typeTextView.setText(t.getPokemonType().getName());
+                            Log.e(TAG,"tipo1: "+ t.getPokemonType().getName());
                         }
                         if(i==1){
                             TextView typeTextView;
                             typeTextView = (TextView) findViewById(R.id.pType2);
-                            typeTextView.setText(pt.getName());
-                            Log.e(TAG,"tipo2: "+ pt.getName());
+                            typeTextView.setText(t.getPokemonType().getName());
+                            Log.e(TAG,"tipo2: "+ t.getPokemonType().getName());
                         }
                     }
-                    */
+
 
                 } else{
                     Log.e(TAG," onResponse: " + response.errorBody());
