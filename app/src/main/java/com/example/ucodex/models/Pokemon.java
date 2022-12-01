@@ -1,6 +1,7 @@
 package com.example.ucodex.models;
 
 import java.util.ArrayList;
+import com.example.ucodex.models.types;
 
 public class Pokemon {
 

@@ -1,12 +1,17 @@
 package com.example.ucodex.models;
 
+import java.util.ArrayList;
+
 public class types {
-    private String name;
-    private String url;
 
-    public String getName() {return name;}
-    public void setName(String name) {this.name = name;}
 
-    public String getUrl() {return url;}
-    public void setUrl(String url) {this.url = url;}
+    private PokemonType type;
+
+
+    public PokemonType getPokemonType() {
+        return this.type;
+    }
+    public void setPokemonType(PokemonType pokemonType) {
+        this.type = pokemonType;
+    }
 }
