@@ -12,11 +12,10 @@ public class Pokemon {
     private ArrayList<types> types;
     private int weight;
     private int height;
-    private int baseExperience;
+    private int base_experience;
     private int id;
-    //private ArrayList<String> abilities;
-
-
+    private ArrayList<baseStat> stats;
+    private ArrayList<ability> abilities;
 
     public String getName() {
         return name;
@@ -49,14 +48,20 @@ public class Pokemon {
     public int getHeight() {return height;}
     public void setHeight(int height) {this.height = height;}
 
-    public int getBaseExperience() {return baseExperience;}
-    public void setBaseExperience(int baseExperience) {this.baseExperience = baseExperience;}
+    public int getBase_experience() {return base_experience;}
+    public void setBase_experience(int base_experience) {this.base_experience = base_experience;}
 
     public int getId() {return id;}
     public void setId(int id) {this.id = id;}
 
-    /*
-    public ArrayList<String> getAbilities() {return abilities;}
-    public void setAbilities(ArrayList<String> abilities) {this.abilities = abilities;}
-    */
+    public ArrayList<baseStat> getStats() {return stats;}
+    public void setStats(ArrayList<baseStat> stats) {this.stats = stats;}
+
+    public ArrayList<ability> getAbilities() {
+        return abilities;
+    }
+
+    public void setAbilities(ArrayList<ability> abilities) {
+        this.abilities = abilities;
+    }
 }
