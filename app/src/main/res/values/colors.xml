@@ -7,4 +7,23 @@
     <color name="teal_700">#E8EAEA</color>
     <color name="black">#FFFFFF</color>
     <color name="white">#FFFFFFFF</color>
+
+    <color name="fire">#F44336</color>
+    <color name="water">#3EAFBD</color>
+    <color name="grass">#4CAF50</color>
+    <color name="bug">#8BC34A</color>
+    <color name="dragon">#3547AA</color>
+    <color name="electric">#FFC107</color>
+    <color name="ground">#7E5434</color>
+    <color name="ghost">#7455AC</color>
+    <color name="flying">#94BFCF</color>
+    <color name="fighting">#D86913</color>
+    <color name="normal">#B3B5B4</color>
+    <color name="poison">#9D44AC</color>
+    <color name="psychic">#E64EAE</color>
+    <color name="steel">#67777E</color>
+    <color name="rock">#A87559</color>
+    <color name="ice">#35C0D3</color>
+    <color name="fairy">#CA80CA</color>
+
 </resources>

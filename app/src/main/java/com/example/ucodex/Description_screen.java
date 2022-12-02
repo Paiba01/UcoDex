@@ -7,10 +7,15 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
 
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.example.ucodex.interfaces.PokeDataService;
 import com.example.ucodex.models.Pokemon;
 import com.example.ucodex.models.ability;
@@ -31,6 +36,7 @@ public class Description_screen extends AppCompatActivity {
     private Retrofit retrofit;
     String pokemonName = "";
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,8 +51,8 @@ public class Description_screen extends AppCompatActivity {
             }
         });
 
-        //Recuperación de información
 
+        //Recuperación de información
         Bundle extras = getIntent().getExtras();
         if(extras != null){
             pokemonName = extras.getString("name");
@@ -58,9 +64,8 @@ public class Description_screen extends AppCompatActivity {
                 .build();
 
         obtenerPokemon(pokemonName);
-
-
     }
+
 
     private void obtenerPokemon(String pokemonName) {
         PokeDataService service = retrofit.create(PokeDataService.class);
@@ -77,13 +82,14 @@ public class Description_screen extends AppCompatActivity {
                     nameTextView = (TextView) findViewById(R.id.pName);
                     nameTextView.setText(p.getName());
 
+
                     TextView PesoTextView;
                     PesoTextView = (TextView) findViewById(R.id.pWeight);
-                    PesoTextView.setText(String.valueOf(p.getWeight()));
+                    PesoTextView.setText(String.valueOf(p.getWeight())+" Kg");
 
                     TextView AlturaTextView;
                     AlturaTextView = (TextView) findViewById(R.id.pHeight);
-                    AlturaTextView.setText(String.valueOf(p.getHeight()));
+                    AlturaTextView.setText(String.valueOf(p.getHeight())+ " m");
 
                     TextView IDTextView;
                     IDTextView = (TextView) findViewById(R.id.pId);
@@ -98,21 +104,59 @@ public class Description_screen extends AppCompatActivity {
                         types t = typeList.get(i);
 
                         if(i==0){
-                            TextView typeTextView;
+                            TextView type1TextView;
+                            LinearLayout fondo;
                             String type1 = t.getPokemonType().getName();
+                            String typeCopy = type1;
                             type1 = translateType(type1);
-                            typeTextView = (TextView) findViewById(R.id.pType1);
-                            typeTextView.setText(type1);
+                            type1TextView = (TextView) findViewById(R.id.pType1);
+                            fondo = (LinearLayout) findViewById(R.id.fondoLayout);
+                            type1TextView.setText(type1);
+                            if(typeCopy.equals("grass")){ type1TextView.setBackgroundResource(R.color.grass); fondo.setBackgroundResource(R.color.grass);}
+                            if(typeCopy.equals("fire")){ type1TextView.setBackgroundResource(R.color.fire); fondo.setBackgroundResource(R.color.fire);}
+                            if(typeCopy.equals("bug")){ type1TextView.setBackgroundResource(R.color.bug); fondo.setBackgroundResource(R.color.bug);}
+                            if(typeCopy.equals("dragon")){ type1TextView.setBackgroundResource(R.color.dragon); fondo.setBackgroundResource(R.color.dragon);}
+                            if(typeCopy.equals("electric")){ type1TextView.setBackgroundResource(R.color.electric); fondo.setBackgroundResource(R.color.electric);}
+                            if(typeCopy.equals("fairy")){type1TextView.setBackgroundResource(R.color.fairy); fondo.setBackgroundResource(R.color.fairy);}
+                            if(typeCopy.equals("fighting")){ type1TextView.setBackgroundResource(R.color.fighting); fondo.setBackgroundResource(R.color.fighting);}
+                            if(typeCopy.equals("flying")){ type1TextView.setBackgroundResource(R.color.flying); fondo.setBackgroundResource(R.color.flying);}
+                            if(typeCopy.equals("ghost")){ type1TextView.setBackgroundResource(R.color.ghost); fondo.setBackgroundResource(R.color.ghost);}
+                            if(typeCopy.equals("ground")){ type1TextView.setBackgroundResource(R.color.ground); fondo.setBackgroundResource(R.color.ground);}
+                            if(typeCopy.equals("ice")){ type1TextView.setBackgroundResource(R.color.ice); fondo.setBackgroundResource(R.color.ice);}
+                            if(typeCopy.equals("rock")){ type1TextView.setBackgroundResource(R.color.rock); fondo.setBackgroundResource(R.color.rock);}
+                            if(typeCopy.equals("normal")){ type1TextView.setBackgroundResource(R.color.normal); fondo.setBackgroundResource(R.color.normal);}
+                            if(typeCopy.equals("poison")){ type1TextView.setBackgroundResource(R.color.poison); fondo.setBackgroundResource(R.color.poison);}
+                            if(typeCopy.equals("psychic")){ type1TextView.setBackgroundResource(R.color.psychic); fondo.setBackgroundResource(R.color.psychic);}
+                            if(typeCopy.equals("steel")){ type1TextView.setBackgroundResource(R.color.steel); fondo.setBackgroundResource(R.color.steel);}
+                            if(typeCopy.equals("water")){ type1TextView.setBackgroundResource(R.color.water); fondo.setBackgroundResource(R.color.water);}
                         }
                         if(i==1){
-                            TextView typeTextView;
+                            TextView type2TextView;
                             String type2 = t.getPokemonType().getName();
+                            String typeCopy = type2;
                             type2 = translateType(type2);
-                            typeTextView = (TextView) findViewById(R.id.pType2);
-                            typeTextView.setText(type2);
+                            type2TextView = (TextView) findViewById(R.id.pType2);
+                            if(typeCopy.equals("grass")) type2TextView.setBackgroundResource(R.color.grass);
+                            if(typeCopy.equals("fire")) type2TextView.setBackgroundResource(R.color.fire);
+                            if(typeCopy.equals("bug")) type2TextView.setBackgroundResource(R.color.bug);
+                            if(typeCopy.equals("dragon")) type2TextView.setBackgroundResource(R.color.dragon);
+                            if(typeCopy.equals("electric")) type2TextView.setBackgroundResource(R.color.electric);
+                            if(typeCopy.equals("fairy")) type2TextView.setBackgroundResource(R.color.fairy);
+                            if(typeCopy.equals("fighting")) type2TextView.setBackgroundResource(R.color.fighting);
+                            if(typeCopy.equals("flying")) type2TextView.setBackgroundResource(R.color.flying);
+                            if(typeCopy.equals("ghost")) type2TextView.setBackgroundResource(R.color.ghost);
+                            if(typeCopy.equals("ground")) type2TextView.setBackgroundResource(R.color.ground);
+                            if(typeCopy.equals("ice")) type2TextView.setBackgroundResource(R.color.ice);
+                            if(typeCopy.equals("rock")) type2TextView.setBackgroundResource(R.color.rock);
+                            if(typeCopy.equals("normal")) type2TextView.setBackgroundResource(R.color.normal);
+                            if(typeCopy.equals("poison")) type2TextView.setBackgroundResource(R.color.poison);
+                            if(typeCopy.equals("psychic")) type2TextView.setBackgroundResource(R.color.psychic);
+                            if(typeCopy.equals("steel")) type2TextView.setBackgroundResource(R.color.steel);
+                            if(typeCopy.equals("water")) type2TextView.setBackgroundResource(R.color.water);
+                            type2TextView.setText(type2);
                         }
                     }
-
+/*
                     ArrayList<baseStat> statsList = p.getStats();
                     for(int i=0; i< statsList.size();i++){
 
@@ -168,9 +212,14 @@ public class Description_screen extends AppCompatActivity {
                             abilityTextView = (TextView) findViewById(R.id.pAbility3);
                             abilityTextView.setText(ability);
                         }
-
-
                     }
+*/
+                    ImageView spriteImageView;
+                    spriteImageView = (ImageView) findViewById(R.id.spriteImage);
+                    Glide.with(Description_screen.this)
+                            .load("https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/" + p.getId() + ".png")
+                            .centerCrop()
+                            .into(spriteImageView);
 
                 } else{
                     Log.e(TAG," onResponse: " + response.errorBody());
@@ -479,4 +528,6 @@ public class Description_screen extends AppCompatActivity {
 
         return ability;
     }
+
+
 }
