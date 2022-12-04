@@ -5,6 +5,7 @@ import static android.icu.lang.UCharacter.toUpperCase;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.TextureView;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
@@ -105,12 +106,12 @@ public class Description_screen extends AppCompatActivity {
 
                         if(i==0){
                             TextView type1TextView;
-                            LinearLayout fondo;
+                            ImageView fondo;
                             String type1 = t.getPokemonType().getName();
                             String typeCopy = type1;
                             type1 = translateType(type1);
                             type1TextView = (TextView) findViewById(R.id.pType1);
-                            fondo = (LinearLayout) findViewById(R.id.fondoLayout);
+                            fondo = (ImageView) findViewById(R.id.fondoLayout);
                             type1TextView.setText(type1);
                             if(typeCopy.equals("grass")){ type1TextView.setBackgroundResource(R.color.grass); fondo.setBackgroundResource(R.color.grass);}
                             if(typeCopy.equals("fire")){ type1TextView.setBackgroundResource(R.color.fire); fondo.setBackgroundResource(R.color.fire);}
@@ -129,6 +130,7 @@ public class Description_screen extends AppCompatActivity {
                             if(typeCopy.equals("psychic")){ type1TextView.setBackgroundResource(R.color.psychic); fondo.setBackgroundResource(R.color.psychic);}
                             if(typeCopy.equals("steel")){ type1TextView.setBackgroundResource(R.color.steel); fondo.setBackgroundResource(R.color.steel);}
                             if(typeCopy.equals("water")){ type1TextView.setBackgroundResource(R.color.water); fondo.setBackgroundResource(R.color.water);}
+                            if(typeCopy.equals("dark")){ type1TextView.setBackgroundResource(R.color.dark); fondo.setBackgroundResource(R.color.dark);}
                         }
                         if(i==1){
                             TextView type2TextView;
@@ -153,10 +155,11 @@ public class Description_screen extends AppCompatActivity {
                             if(typeCopy.equals("psychic")) type2TextView.setBackgroundResource(R.color.psychic);
                             if(typeCopy.equals("steel")) type2TextView.setBackgroundResource(R.color.steel);
                             if(typeCopy.equals("water")) type2TextView.setBackgroundResource(R.color.water);
+                            if(typeCopy.equals("dark")) type2TextView.setBackgroundResource(R.color.dark);
                             type2TextView.setText(type2);
                         }
                     }
-/*
+
                     ArrayList<baseStat> statsList = p.getStats();
                     for(int i=0; i< statsList.size();i++){
 
@@ -213,7 +216,7 @@ public class Description_screen extends AppCompatActivity {
                             abilityTextView.setText(ability);
                         }
                     }
-*/
+
                     ImageView spriteImageView;
                     spriteImageView = (ImageView) findViewById(R.id.spriteImage);
                     Glide.with(Description_screen.this)
@@ -252,6 +255,7 @@ public class Description_screen extends AppCompatActivity {
         if(type.equals("psychic")) type = "Psíquico";
         if(type.equals("steel")) type = "Acero";
         if(type.equals("water")) type = "Agua";
+        if(type.equals("dark")) type = "Siniestro";
         return type;
     }
 
