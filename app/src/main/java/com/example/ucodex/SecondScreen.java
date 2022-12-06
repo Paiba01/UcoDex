@@ -2,6 +2,7 @@ package com.example.ucodex;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.SearchView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
@@ -19,11 +20,12 @@ import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
-public class SecondScreen extends AppCompatActivity {
+public class SecondScreen extends AppCompatActivity implements SearchView.OnQueryTextListener {
 
     private static final String TAG = "UcoDex";
     private Retrofit retrofit;
     private RecyclerView recyclerView;
+    private SearchView svSearch;
     private ListaPokemonAdapter listaPokemonAdapter;
 
     @Override
@@ -31,6 +33,8 @@ public class SecondScreen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_second_screen);
 
+        svSearch = findViewById(R.id.pokemon_search);
+        initListener();
         recyclerView = findViewById(R.id.recyclerView);
         listaPokemonAdapter = new ListaPokemonAdapter(this);
         recyclerView.setAdapter(listaPokemonAdapter);
@@ -70,6 +74,19 @@ public class SecondScreen extends AppCompatActivity {
                 Log.e(TAG," onFailure:" + t.getMessage());
             }
         });
+    }
+    private void initListener(){
+        svSearch.setOnQueryTextListener(this);
+    }
+
+    @Override
+    public boolean onQueryTextSubmit(String s) {
+        return false;
+    }
+
+    @Override
+    public boolean onQueryTextChange(String s) {
+        return false;
     }
 }
 
