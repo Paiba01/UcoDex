@@ -1,7 +1,7 @@
 <!-- # UcoDex
 Esta es la aplicación UcoDex. -->
 
-<img align="center" src="https://github.com/Paiba01/UcoDex/blob/master/logo_ucoDex.png" alt="UcoDex">
+<img src="https://github.com/Paiba01/UcoDex/blob/master/logo_ucoDex.png" alt="UcoDex">
 
 # UcoDex
 
