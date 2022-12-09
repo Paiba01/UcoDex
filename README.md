@@ -25,9 +25,8 @@ Play and have fun while learning new words.
 
 ## Authors
 
+- **Pablo Ibañez Fernández-Delgado** - [Github](https://github.com/Paiba01)
+- **Pablo López Gosálvez** - [Github](https://github.com/pabloccf)
 - **José Ángel Dorado González** - [Github](https://github.com/Joselete77)
 - **María Duque Román** - [Github](https://github.com/mariaduq)
-- **Pablo López Gosálvez** - [Github](https://github.com/pabloccf)
-- **Pablo Ibañez Fernández-Delgado** - [Github](https://github.com/Paiba01)
-- **Rubén Barona Alba** - [Github](https://github.com/rubenbarona/)
-- **David Barbero Jurado** - [Github](https://github.com/d4vidsn8w)
+- **Natalia Jiménez Aranda** - [Github](https://github.com/NataliaJimenez01)
