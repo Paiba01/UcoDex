@@ -14,7 +14,7 @@ It has many features such as login, registration, edit profile, have friends wit
 
 ## Usage
 
-Play and have fun while learning new words.
+Use it while playing the pokemon game to know the data of your pokemon or the one you are facing.
 
 ## Built With
 
