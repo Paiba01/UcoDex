@@ -10,7 +10,7 @@ UcoDex is a pokemon encyclopedia that contains the records of all the pokemon in
 
 ## Functionalities
 
-It has many features such as login, registration, edit profile, have friends within the game itself, play as many times as you want a day, write in a blog, dark and light mode and choose difficulty and depending on the level, you will have more or less attempts to guess the word.
+The functionalities of the UcoDex mobile application are to show you all the pokemon with their names and images, search for a certain pokemon by its name and click on it to find out its data such as its types, abilities, base experience, etc.
 
 ## Usage
 
