@@ -31,8 +31,6 @@ public class ListaPokemonAdapter extends RecyclerView.Adapter<ListaPokemonAdapte
         this.context = context;
         dataset = new ArrayList<>();
         this.originalList = new ArrayList<>();
-
-
     }
 
     @Override

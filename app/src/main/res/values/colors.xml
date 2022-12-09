@@ -27,4 +27,6 @@
     <color name="fairy">#CA80CA</color>
     <color name="dark">#57595C</color>
 
+    <color name="text_background">#C9C9C9</color>
+
 </resources>
