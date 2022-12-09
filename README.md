@@ -1,15 +1,12 @@
-<!-- # UcoDex
-Esta es la aplicación UcoDex. -->
-
 <img src="https://github.com/Paiba01/UcoDex/blob/master/logo_ucoDex.png" alt="UcoDex">
 
 # UcoDex
 
-## It is a game of guessing words through a number of attempts
+## It is a mobile application that does the functionality of a pokedex, knowing the data of a pokemon.
 
 ## Introduction
 
-Wordle is a game of guessing words through a number of attempts determined by the level of difficulty chosen and you can also have friends, write in a blog and a lot of other features that the original game does not have.
+UcoDex is a pokemon encyclopedia that contains the records of all the pokemon in the game with their respective data.
 
 ## Functionalities
 
