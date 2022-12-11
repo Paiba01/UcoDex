@@ -19,6 +19,7 @@ Use it while playing the pokemon game to know the data of your pokemon or the on
 ## Built With
 
 [![Java](https://img.shields.io/badge/Java-D00000?style=for-the-badge&logo=java&logoColor=white)]()
+[![XML](https://img.shields.io/badge/XML-E38C00?style=for-the-badge&logo=xml&logoColor=white)]()
 
 ## Authors
 
