@@ -6,6 +6,6 @@ import com.example.ucodex.models.PokemonAnswer;
 import retrofit2.http.GET;
 
 public interface PokemonAPIService {
-    @GET("pokemon/?limit=802")
+    @GET("pokemon/?limit=1154")
     Call<PokemonAnswer> obtenerListaPokemon();
 }

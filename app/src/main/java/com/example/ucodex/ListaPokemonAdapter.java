@@ -67,6 +67,7 @@ public class ListaPokemonAdapter extends RecyclerView.Adapter<ListaPokemonAdapte
 
     @SuppressLint("NotifyDataSetChanged")
     public void filter(String strSearch){
+
         if(strSearch.length()==0){
             dataset.clear();
             dataset.addAll(originalList);

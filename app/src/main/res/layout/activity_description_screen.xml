@@ -40,7 +40,7 @@
             android:layout_height="294dp"
             android:layout_marginStart="4dp"
             android:accessibilityLiveRegion="assertive"
-            android:backgroundTint="#F8E4E2E2"
+            android:backgroundTint="#DAD9D9"
             android:translationX="50dp"
             android:translationY="90dp"
             app:cardCornerRadius="20dp"
@@ -53,6 +53,7 @@
             app:layout_constraintVertical_bias="0.0">
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/cardType1"
                 android:layout_width="79dp"
                 android:layout_height="26dp"
                 android:backgroundTint="#C8C5C5"
@@ -72,6 +73,7 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/cardType2"
                 android:layout_width="79dp"
                 android:layout_height="26dp"
                 android:backgroundTint="#C8C5C5"

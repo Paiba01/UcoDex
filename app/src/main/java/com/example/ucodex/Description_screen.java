@@ -13,6 +13,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 
 import com.bumptech.glide.Glide;
@@ -86,11 +87,13 @@ public class Description_screen extends AppCompatActivity {
 
                     TextView PesoTextView;
                     PesoTextView = (TextView) findViewById(R.id.pWeight);
-                    PesoTextView.setText(String.valueOf(p.getWeight())+" Kg");
+                    float w = (float) (p.getWeight()*0.1);
+                    PesoTextView.setText(w +" Kg");
 
                     TextView AlturaTextView;
                     AlturaTextView = (TextView) findViewById(R.id.pHeight);
-                    AlturaTextView.setText(String.valueOf(p.getHeight())+ " m");
+                    float h = (float) (p.getHeight()*0.1);
+                    AlturaTextView.setText(h + " m");
 
                     TextView IDTextView;
                     IDTextView = (TextView) findViewById(R.id.pId);
@@ -101,16 +104,24 @@ public class Description_screen extends AppCompatActivity {
                     BaseExperienceTextView.setText(String.valueOf(p.getBase_experience()));
 
                     ArrayList<types> typeList = p.getTypes();
+                    CardView card1 = (CardView) findViewById(R.id.cardType1);
+                    CardView card2 = (CardView) findViewById(R.id.cardType2);
+                    TextView type1TextView = (TextView) findViewById(R.id.pType1);
+                    TextView type2TextView = (TextView) findViewById(R.id.pType2);
+
                     for(int i=0;i< typeList.size();i++){
                         types t = typeList.get(i);
 
                         if(i==0){
-                            TextView type1TextView;
+
+                            card2.setVisibility(card2.INVISIBLE);
+                            type2TextView.setVisibility(type2TextView.INVISIBLE);
+                            card2.setTranslationX(300);
+                            card1.setTranslationX(300);
                             ImageView fondo;
                             String type1 = t.getPokemonType().getName();
                             String typeCopy = type1;
                             type1 = translateType(type1);
-                            type1TextView = (TextView) findViewById(R.id.pType1);
                             fondo = (ImageView) findViewById(R.id.fondoLayout);
                             type1TextView.setText(type1);
                             if(typeCopy.equals("grass")){ type1TextView.setBackgroundResource(R.color.grass); fondo.setBackgroundResource(R.color.grass);}
@@ -133,11 +144,14 @@ public class Description_screen extends AppCompatActivity {
                             if(typeCopy.equals("dark")){ type1TextView.setBackgroundResource(R.color.dark); fondo.setBackgroundResource(R.color.dark);}
                         }
                         if(i==1){
-                            TextView type2TextView;
+
+                            card2.setVisibility(card2.VISIBLE);
+                            type2TextView.setVisibility(type2TextView.VISIBLE);
+                            card2.setTranslationX(450);
+                            card1.setTranslationX(160);
                             String type2 = t.getPokemonType().getName();
                             String typeCopy = type2;
                             type2 = translateType(type2);
-                            type2TextView = (TextView) findViewById(R.id.pType2);
                             if(typeCopy.equals("grass")) type2TextView.setBackgroundResource(R.color.grass);
                             if(typeCopy.equals("fire")) type2TextView.setBackgroundResource(R.color.fire);
                             if(typeCopy.equals("bug")) type2TextView.setBackgroundResource(R.color.bug);
