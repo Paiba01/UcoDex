@@ -101,6 +101,13 @@
                 android:translationY="-20dp"
                 tools:srcCompat="@tools:sample/avatars" />
 
+            <View
+                android:id="@+id/divider"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="?android:attr/listDivider"
+                android:translationY="235dp" />
+
         </androidx.cardview.widget.CardView>
 
         <ScrollView
